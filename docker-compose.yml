@@ -8,7 +8,7 @@ services:
     volumes:
       - db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=
+      - MYSQL_ROOT_PASSWORD=setrootpassword
     env_file:
       - db.env
 
@@ -30,7 +30,7 @@ services:
     volumes:
       - nextcloud:/var/www/html:ro
     environment:
-      - VIRTUAL_HOST=
+      - VIRTUAL_HOST=FQDN-of-the-aws-machine
     depends_on:
       - app
     networks:
